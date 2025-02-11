@@ -3,27 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebGL Example</title>
+    <title>Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+        }
+        .contact-info div {
+            width: 48%;
+        }
+        .section {
+            margin-top: 20px;
+        }
+        .section h3 {
+            background-color: #333;
+            color: white;
+            padding: 5px;
+            margin: 0;
+        }
+        .experience, .education, .skills {
+            margin-top: 15px;
+        }
+        .experience ul, .education ul, .skills ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .experience li, .education li, .skills li {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-    <canvas id="webgl-canvas" width="500" height="500"></canvas>
 
-    <script>
-        // Get the canvas element
-        const canvas = document.getElementById("webgl-canvas");
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <h1>John Doe</h1>
+            <p>Web Developer | Graphic Designer</p>
+        </div>
 
-        // Initialize WebGL
-        const gl = canvas.getContext("webgl");
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <div>
+                <p>Email: john.doe@example.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div>
+                <p>Location: New York, NY</p>
+                <p>LinkedIn: linkedin.com/in/johndoe</p>
+            </div>
+        </div>
 
-        if (!gl) {
-            console.log("WebGL not supported");
-        } else {
-            // Clear the canvas with a color
-            gl.clearColor(0.0, 0.0, 0.0, 1.0); // black background
-            gl.clear(gl.COLOR_BUFFER_BIT); // clear the canvas
+        <!-- About Section -->
+        <div class="section">
+            <h2>About Me</h2>
+            <p>I am a passionate Web Developer with 5 years of experience building and optimizing websites. Skilled in both front-end and back-end technologies, I am eager to contribute to creative projects and innovative teams.</p>
+        </div>
 
-            // Create shaders, program, buffers, and drawing logic here
-        }
-    </script>
+        <!-- Experience Section -->
+        <div class="section experience">
+            <h3>Experience</h3>
+            <ul>
+                <li><strong>Web Developer</strong> - XYZ Company (Jan 2020 - Present)</li>
+                <li><strong>Junior Web Developer</strong> - ABC Solutions (Jun 2018 - Dec 2019)</li>
+            </ul>
+        </div>
+
+        <!-- Education Section -->
+        <div class="section education">
+            <h3>Education</h3>
+            <ul>
+                <li><strong>Bachelor of Science in Computer Science</strong> - University of XYZ (2014 - 2018)</li>
+            </ul>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="section skills">
+            <h3>Skills</h3>
+            <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>React, Node.js</li>
+                <li>Responsive Web Design</li>
+                <li>Git, GitHub</li>
+                <li>Problem Solving</li>
+            </ul>
+        </div>
+
+    </div>
+
 </body>
 </html>
+
