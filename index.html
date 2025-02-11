@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGL Example</title>
+</head>
+<body>
+    <canvas id="webgl-canvas" width="500" height="500"></canvas>
+
+    <script>
+        // Get the canvas element
+        const canvas = document.getElementById("webgl-canvas");
+
+        // Initialize WebGL
+        const gl = canvas.getContext("webgl");
+
+        if (!gl) {
+            console.log("WebGL not supported");
+        } else {
+            // Clear the canvas with a color
+            gl.clearColor(0.0, 0.0, 0.0, 1.0); // black background
+            gl.clear(gl.COLOR_BUFFER_BIT); // clear the canvas
+
+            // Create shaders, program, buffers, and drawing logic here
+        }
+    </script>
+</body>
+</html>
